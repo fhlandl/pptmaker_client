@@ -4,10 +4,7 @@ import Todo from '../Todo/Todo';
 import styles from './TodoList.module.css';
 
 export default function TodoList({ filter }) {
-  const [todos, setTodos] = useState([
-    { id: '123', text: 'study', status: 'active' },
-    { id: '124', text: 'exercise', status: 'active' },
-  ]);
+  const [todos, setTodos] = useState([]);
   const handleAdd = (todo) => setTodos([...todos, todo]);
   const handleUpdate = (updated) =>
     setTodos(todos.map((t) => (t.id === updated.id ? updated : t)));
