@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  background:#263343;
+  padding: 15px 20px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  font-size: 45px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
+  align-items: center;
+}
+
+.text {
+  margin: 20px;
+  font-weight: bold;
+}
+
+.icon {
+  padding: 0 0 5px 0;
+}
+
+.listitem {
+  margin: 0 15px 0 0;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  color:aliceblue;
+  opacity: 0.8;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.button:hover,
+.button.selected {
+  opacity: 1;
+}
+
+.button.selected::after {
+  content: '';
+  display: block;
+  margin-top: 0.2rem;
+  border: 1px solid aliceblue;
+}
