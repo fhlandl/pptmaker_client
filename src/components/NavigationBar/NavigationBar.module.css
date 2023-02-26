@@ -54,3 +54,48 @@
   margin-top: 0.2rem;
   border: 1px solid aliceblue;
 }
+
+.toggleBtn {
+  display: none;
+}
+
+
+@media screen and (max-width: 1075px) { /*영상에선 768px*/
+  .navbar {
+      flex-direction: column; /*기존은 row, column으로 아래로 내림*/
+      align-items: flex-start; /*왼쪽으로 이동*/
+  }
+  .menu{
+      display: none; /*화면에서 사라짐*/
+      flex-direction: column;
+      align-items: center; /*중앙배치*/
+      width: 100% /*align-items가 반응하지 않는 부분을 width가 보완*/
+  }
+  .menu li{ /*hover부분이 넓어짐*/
+      width: 100%; 
+      text-align: center;
+  }
+  .navbar_icons {
+      display: none; 
+      justify-content: center; /*중앙 배치*/
+      width: 100%;
+  }
+  .toggleBtn{/*화면이 작아질때만 표시되도록 함*/
+      display: block;
+      border: none;
+      background-color: transparent;
+      color:aliceblue;
+      font-size: 27px;
+      opacity: 0.8;
+      position: absolute;
+      right: 32px;
+      top: 50px;
+  }
+  .toggleBtn:hover {
+    opacity: 1;
+  }
+  .menu.active,
+  .icons.active { /*navbar_toogleBtn이 클릭시 활성화*/
+      display: flex;  
+  }
+}
